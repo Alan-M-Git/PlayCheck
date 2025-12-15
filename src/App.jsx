@@ -1,16 +1,11 @@
-import GameContainer from "./components/GameContainer"
+import GameContainer from "./components/GameContainer";
 
-
-
-function App(){
-
-  return(
-    <div>
+function App() {
+  return (
+    <div className="app-container">
       <GameContainer />
     </div>
-  )
-
-
+  );
 }
 
-export default App
+export default App;
