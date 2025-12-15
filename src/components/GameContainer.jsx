@@ -1,3 +1,4 @@
+// GameContainer.jsx
 import { useState } from "react";
 import Form from "./Form";
 import Table from "./Table";
@@ -22,6 +23,15 @@ function GameContainer() {
     setGames((prevGames) => prevGames.filter((game) => game.id !== id));
   };
 
+  // Called when Table requests to toggle completion status (via props)
+  const handleToggleComplete = (id) => {
+    setGames((prevGames) =>
+      prevGames.map((game) =>
+        game.id === id ? { ...game, completed: !game.completed } : game
+      )
+    );
+  };
+
   return (
     <div className="game-container">
       <h1>Video Game Checklist</h1>
@@ -29,8 +39,12 @@ function GameContainer() {
       {/* Pass down callback as prop (for adding) */}
       <Form onAddGame={handleAddGame} />
 
-      {/* Pass down state and callback as props (for listing & deleting) */}
-      <Table games={games} onDeleteGame={handleDeleteGame} />
+      {/* Pass down state and callbacks as props (for listing, deleting, and completing) */}
+      <Table 
+        games={games} 
+        onDeleteGame={handleDeleteGame} 
+        onToggleComplete={handleToggleComplete}
+      />
     </div>
   );
 }
