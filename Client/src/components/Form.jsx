@@ -50,7 +50,7 @@ function Form({ onAddGame }) {
           <input
             type="text"
             value={consoles}
-            placeholder="E.g. PlayStation 5, Xbox Series X, PC"
+            placeholder="E.g. PlayStation, Nintendo, Xbox"
             onChange={(e) => setConsoles(e.target.value)}
           />
         </label>
