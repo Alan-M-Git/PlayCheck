@@ -10,7 +10,7 @@ function GameContainer() {
 
 
   // Base URL for your API
-  const API_BASE = "http://localhost:5000/api/games";
+  const API_BASE = "http://localhost:8000/api/games";
 
 
   // Load games from server on mount
