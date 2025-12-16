@@ -70,6 +70,7 @@ app.delete('/api/games/:id', (req, res) => {
   res.status(204).send();
 });
 
+//Start Server
 app.listen(PORT, () => {
   console.log(`Server listening on http://localhost:${PORT}`);
 });
