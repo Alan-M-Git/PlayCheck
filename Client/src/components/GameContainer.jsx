@@ -71,11 +71,14 @@ function GameContainer() {
   // Called when Table requests to toggle completion status (via props)
   const handleToggleComplete = async (id) => {
     const game = games.find((g) => g.id === id);
-    if (!game) return;
+    if (!game) {
+      console.error('Game not found with id:', id);
+      return;
+    }
 
-
-    const updatedPayload = { ...game, completed: !game.completed };
-
+    // Only send the completed field, not the entire game object
+    const updatedPayload = { completed: !game.completed };
+    console.log('Toggling completion for game:', id, 'New value:', updatedPayload.completed);
 
     try {
       const res = await fetch(`${API_BASE}/${id}`, {
@@ -83,8 +86,15 @@ function GameContainer() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedPayload),
       });
-      if (!res.ok) throw new Error("Failed to update game");
+      
+      if (!res.ok) {
+        const errorData = await res.json().catch(() => ({ message: 'Unknown error' }));
+        console.error('Server error response:', errorData);
+        throw new Error(errorData.message || "Failed to update game");
+      }
+      
       const updated = await res.json();
+      console.log('Update successful, received:', updated);
 
 
       setGames((prevGames) =>
