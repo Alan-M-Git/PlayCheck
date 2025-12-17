@@ -42,9 +42,7 @@ function transformGameRow(row) {
     consoles: row.consoles,
     trophies: row.trophies,
     startDate: formatDate(row.start_date), // YYYY-MM-DD
-    completed: Boolean(row.completed),      // Ensure boolean
-    createdAt: row.created_at || null,
-    updatedAt: row.updated_at || null       // Safe if column is missing
+    completed: Boolean(row.completed)      // Ensure boolean
   };
 }
 
@@ -73,7 +71,7 @@ async function createGame(gameData) {
 async function updateGame(id, gameData) {
   const { name, consoles, trophies, startDate, completed } = gameData;
 
-  // Debug logging
+  //Code used for Debug logging
   console.log('Updating game ID:', id);
   console.log('Received data:', JSON.stringify(gameData, null, 2));
   console.log('Completed value:', completed, 'Type:', typeof completed);
@@ -116,7 +114,7 @@ async function updateGame(id, gameData) {
     throw new Error('No fields to update.');
   }
 
-  // REMOVE updated_at update since the column may not exist
+  // ID parameter
   values.push(id);
 
   const query = `UPDATE games SET ${updates.join(', ')} WHERE id = $${paramCount} RETURNING *`;

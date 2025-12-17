@@ -20,7 +20,7 @@ function Form({ onAddGame }) {
       consoles: consoles.trim(),
       trophies: parseInt(trophies) || 0,
       startDate: startDate.trim(),
-      completed: false, // New games start as incomplete
+      completed: false, // New games start as incomplete. Making it true means the user finished the game.
     });
 
     // Clear the form fields

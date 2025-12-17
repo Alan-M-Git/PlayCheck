@@ -72,7 +72,7 @@ app.use((req, res, next) => {
   }
 });
 
-// Start Server
+// Start Server for PlayCheck App
 app.listen(PORT, () => {
   console.log(`App is running on Port http://localhost:${PORT}`);
 });
