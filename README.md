@@ -18,7 +18,7 @@ IMPORTANT: As of 12/22/25, the frontend side on Vercel has issues in regards to 
 //Setup Instructions//
 As mentioned, this project was built on React(Vite). To run this project locally, ensure that your development environment meets the necessary prerequisites, including React, Express, and Postgres. Once the prerequisites are installed, begin by cloning the project repository from GitHub. Navigate into the project directory and install all required dependencies using the appropriate package manager.
 
-After the dependencies are installed, start the application using "Server/node index.js" on your terminal. Once the application is running, it can be accessed locally in a web browser at localhost 8000 and port 8000. This local setup allows for development, testing, and experimentation without affecting the deployed version. Below are the following links for running the frontend and backend of the server locally on your computer, including the API.
+After the dependencies are installed, start the application by connecting using "cd Server" on your terminal, and then type "node index.js" afterwards. Once the application is running, it can be accessed locally in a web browser at localhost 8000 and port 8000. This local setup allows for development, testing, and experimentation without affecting the deployed version. Below are the following links for running the frontend and backend of the server locally on your computer, including the API.
 
 Client(Frontend): http://localhost:8000/
 
