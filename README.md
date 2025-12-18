@@ -1,7 +1,7 @@
 PLAYCHECK
 
 //Overview//
-The project Playcheck, was created to note any videogames that have been completed, establsihing your dedication to completing games as much as possible. It demonstrates the fundamentals of React with knowledge on the functionality of the frontend/backend, the ability to integrate a cloud hosted database(Neon), which allows us to utilize CRUD operations which creates, reads, updates, and deletes any videogame listed that the user desires, and API Integration using fetch, showing the relationship between the client and the server. The application is designed to be simple and user-friendly, making it suitable for both casual and competitive gamers.
+The project Playcheck, was created to note any videogames that have been completed, establishing your dedication to completing games as much as possible. It demonstrates the fundamentals of React with knowledge on the functionality of the frontend/backend, the ability to integrate a cloud hosted database(Neon), which allows us to utilize CRUD operations which creates, reads, updates, and deletes any videogame listed that the user desires, and API Integration using fetch, showing the relationship between the client and the server. The application is designed to be simple and user-friendly, making it suitable for both casual and competitive gamers.
 
 
 //Deployment//
@@ -29,6 +29,6 @@ Server(Backend): http://localhost:8000/api/games
 //Reflections//
 Throughout the development of this project, several aspects worked particularly well. The structure of the checklist form, and the CSS was easy to do, and seeing how it gave the site more character was interesting. I was also satisfied with the idea of creating a checklist that can even be for personal use.
 
-However, the project also presented challenges. As mentioned before, the deployed version on vercel caused issues surrounding the response when the buttons are clicked being unable to fetch. This is not an issue when running the app locally, therfore I wonder what could be the issue that would allow me to properly use the checklist on the deployed version. The most challenging aspect however was understanding Neon and trying to connect the database to my server. I knew how to connect to a postgres database locally, but connecting to a database on a cloud hosted site without any knowledge beforehand was very confusing and challenging.
+However, the project also presented challenges. As mentioned before, the deployed version on vercel caused issues surrounding the response when the buttons are clicked being unable to fetch. This is not an issue when running the app locally, therefore I wonder what could be the issue that would allow me to properly use the checklist on the deployed version. The most challenging aspect however was understanding Neon and trying to connect the database to my server. I knew how to connect to a postgres database locally, but connecting to a database on a cloud hosted site without any knowledge beforehand was very confusing and challenging.
 
 This project provided valuable learning experiences, including React, Postgres, API's, CRUD, and the relationship shared between the frontend and backend. If the project were to be continued, I would like to know how to fix my deployment issue on vercel. These enhancements would further refine the project and expand its functionality.
